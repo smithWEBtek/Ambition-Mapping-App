@@ -1,10 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/main/Navbar';
+import Stepper from './components/main/Stepper';
 
 function App() {
   return (
     <div className="App">
+
+      <Navbar />
+      <Stepper />
+
       
     </div>
   );
