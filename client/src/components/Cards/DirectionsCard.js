@@ -1,7 +1,3 @@
-//Navbar
-
-//Stepper
-
 //Card
 
 // Title
