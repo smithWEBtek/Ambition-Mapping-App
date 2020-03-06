@@ -13,7 +13,6 @@ function App() {
     backgroundColor: "#DCDCDC",
     paddingBottom: '150px',
     
-    
 
   }
   return (

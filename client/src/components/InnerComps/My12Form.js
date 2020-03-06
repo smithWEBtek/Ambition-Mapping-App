@@ -50,8 +50,6 @@ class My12Form extends React.Component {
     <div>
       <form onSubmit={this.onSubmit}> 
         <TextField
-          // id={i}
-          // label= {i}
           style={{ margin: 8 }}
           margin="normal"
           fullWidth="true"
@@ -61,7 +59,141 @@ class My12Form extends React.Component {
           variant="outlined"
           // value = {this.state.answers[i]}
           onChange = {this.onChange}
+          
         />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        <TextField
+          style={{ margin: 8 }}
+          margin="normal"
+          fullWidth="true"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          // value = {this.state.answers[i]}
+          onChange = {this.onChange}
+          
+        />
+        
       </form>
 
       <Button

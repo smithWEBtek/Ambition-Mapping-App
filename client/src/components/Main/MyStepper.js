@@ -7,6 +7,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DirectionsCard from '../Cards/DirectionsCard';
 import WelcomeCard from '../Cards/WelcomeCard';
+import Part1Card from '../Cards/Part1Card';
+import Part2Card from '../Cards/Part2Card';
 // import FormCard from '../Cards/FormCard';
 
 const useStyles = makeStyles(theme => ({
@@ -32,9 +34,9 @@ function getStepContent(step) {
     case 0:
       return <WelcomeCard />
     case 1:
-      return <DirectionsCard />
+      return <Part1Card />
     case 2:
-      return 'This is the bit I really care about!';
+      return <Part2Card />;
     case 3:
       return 'This is the bit I really care about!';
     case 4:
