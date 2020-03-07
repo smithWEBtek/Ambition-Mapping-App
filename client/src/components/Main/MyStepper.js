@@ -75,7 +75,7 @@ export default function MyStepper() {
   return (
 
     <div className={classes.root}>
-      <Stepper activeStep={activeStep} alternativeLabel>
+      <Stepper activeStep={activeStep} alternativeLabel elevation={18}>
         {steps.map((label) => {
           const stepProps = {};
           const labelProps = {};
