@@ -7,7 +7,13 @@ import Paper from '@material-ui/core/Paper';
 import Book from '../images/book.jpg';
 import EmojiPeopleRoundedIcon from '@material-ui/icons/EmojiPeopleRounded';
 import TextField from '@material-ui/core/TextField';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
+
+const onSubmit = (e) => {
+    e.preventDefault();
+    
+}
 
 export default function WelcomeCard(props) {
     const classes = useStyles();
@@ -15,7 +21,6 @@ export default function WelcomeCard(props) {
 
     return (
         <Paper className={classes.root} elevation={24}>
-
 
             <Grid container spacing={4}>
                 <Grid item xs={6}>
@@ -44,11 +49,12 @@ export default function WelcomeCard(props) {
                         />
                     </form>
                     <Button
+                        //onSubmit
                         variant="contained"
                         color="light"
                         className={classes.button}
                     >
-                        Submit
+                        Start <DoubleArrowIcon />
                     </Button>
                 </Grid>
 
@@ -77,11 +83,11 @@ const useStyles = makeStyles({
     },
     title: {
 
-        paddingBottom: "25px",
+        paddingBottom: "12px",
         fontSize: 24,
         textAlign: "left",
         marginTop: "35px",
-        paddingLeft: "8px"
+        paddingLeft: "12px"
     },
 
     body: {
@@ -89,7 +95,7 @@ const useStyles = makeStyles({
         fontSize: 18,
         color: "textSecondary",
         paddingBottom: "12px",
-        paddingLeft: "8px"
+        paddingLeft: "12px"
     },
 
     pos: {

@@ -5,29 +5,12 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import DirectionsCard from '../Cards/DirectionsCard';
 import WelcomeCard from '../Cards/WelcomeCard';
 import Part1Card from '../Cards/Part1Card';
 import Part2Card from '../Cards/Part2Card';
-// import FormCard from '../Cards/FormCard';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    paddingLeft: "10%",
-    paddingRight: '10%',
-  },
-  button: {
-    marginTop: "25px",
-    marginRight: theme.spacing(1),
-  },
-  instructions: {
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-  },
-}));
 
 function getSteps() {
-  return ['Welcome', 'Via Negativa', 'Via Positiva', 'Filter Intutions', 'Ambition Map', 'Clarify Goals', 'Develop Milestones', 'Complete!'];
+  return ['Welcome', 'Via Negativa', 'Via Positiva', 'Filter Intuitions', 'Ambition Map', 'Clarify Goals', 'Milestones', 'Complete!'];
 }
 
 function getStepContent(step) {
@@ -131,4 +114,19 @@ export default function MyStepper() {
       </div>
     </div>
   );
-}
+};
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    paddingLeft: "10%",
+    paddingRight: '10%',
+  },
+  button: {
+    marginTop: "25px",
+    marginRight: theme.spacing(1),
+  },
+  instructions: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+  },
+}));

@@ -5,47 +5,66 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import My12Form from '../InnerComps/My12Form';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import AllQuestions from '../../data/questions.json';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 const Part1Card = () => {
 
     const classes = useStyles();
     const [content, setContent] = useState('directions');
+    const [answers, setAnswers] = useState({
+        1: null, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: null, 9: null, 10: null, 11: null, 12: null,
+    });
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+    const questions = AllQuestions.negativa
 
     function handleContentChange(contentToChangeTo) {
         setContent(contentToChangeTo)
     }
 
+
     return (
         <>
             {content === 'directions' &&
 
-                <Paper>
+                <Paper className={classes.root}>
 
-                    <Grid container>
+                    <Grid container spacing={3}>
 
-                        <Grid item xs={12}>
+                        <Grid item xs={12} >
 
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 Part 1: Via Negativa
                             </Typography>
+                         
                         </Grid>
 
-                        <Grid item xs={6}>
+                        <Grid item xs={12}>
                             <Typography className={classes.body}>
-                                Write each sentence stem and then immediately finish the sentence. Do this for each stem 12 times. Do not worry about spelling, grammar, or repeating yourself. Do not self-censor. These are for you and nobody else. Follow your gut.
+                                <AssignmentIcon /> Directions: <br></br><br></br>
+                                <ArrowRightIcon />Write each sentence stem and then immediately finish the sentence. <br></br>
+                                <ArrowRightIcon />Do this for each stem 12 times. <br></br>
+                                <ArrowRightIcon />Do not worry about spelling, grammar, or repeating yourself. <br></br>
+                                <ArrowRightIcon />Do not self-censor. These are for you and nobody else. Follow your gut.
                             </Typography>
 
                         </Grid>
 
-                        <Grid item xs={6}>
+                        {/* <Grid item xs={6}>
 
-                        </Grid>
+                        </Grid> */}
 
                         <Grid item xs={12}>
                             <Button
-                                onClick={()=>handleContentChange('form')}
+                                onClick={() => handleContentChange('form')}
+                                color="light"
+                                variant="contained"
+                                className={classes.button}
                             >
-                                Next
+                                Start Part 1 <DoubleArrowIcon />
                             </Button>
                         </Grid>
 
@@ -53,7 +72,7 @@ const Part1Card = () => {
 
                 </Paper >
 
-            };
+            }
 
             {content === 'form' &&
 
@@ -66,23 +85,32 @@ const Part1Card = () => {
                             <Typography className={classes.title} color="textPrimary" gutterBottom>
                                 Part 1: Via Negativa
                             </Typography>
+                        
+                           
                         </Grid>
 
                         <Grid item xs={12} className={classes.form} alignContent="center" justify="center">
-                            
-                                <My12Form />
-                            
+
+                            <My12Form
+                                currentQuestion={questions[currentQuestionIndex]}
+                                currentQuestionIndex={currentQuestionIndex}
+                                answers={answers}
+                                setAnswers={setAnswers}
+                                setCurrentQuestionIndex={setCurrentQuestionIndex}
+                            />
+
 
                         </Grid>
 
-                    
-                        <Grid item xs={12}>
+
+                        {/* <Grid item xs={12}>
                             <Button
-                                onClick={()=>handleContentChange('directions')}
+                                className={classes.button}
+                                onClick={() => handleContentChange('directions')}
                             >
-                                Directions
+                                View Directions
                             </Button>
-                        </Grid>
+                        </Grid> */}
 
                     </Grid>
 
@@ -92,33 +120,36 @@ const Part1Card = () => {
             }
 
         </>
-    );
+    )
 };
 
 const useStyles = makeStyles({
     root: {
+
         display: "flex",
         flexGrow: 1,
         minWidth: 275,
-        // paddingLeft: "10%",
-        // paddingRight: "10%",
+        paddingLeft: "8%",
+        paddingRight: "8%",
     },
     title: {
 
-        paddingBottom: "25px",
-        paddingTop: "15px",
+        paddingBottom: "12px",
         fontSize: 24,
-        textAlign: "center",
+        textAlign: "left",
+        marginTop: "35px",
+        paddingLeft: "24px"
     },
 
     body: {
 
         marginleft: "25px",
         marginRight: "15px",
-        textAlign: "center",
-        fontSize: 14,
+        textAlign: "left",
+        fontSize: 18,
         color: "textSecondary",
         paddingBottom: "12px",
+        paddingLeft: "12px"
     },
 
     pos: {
@@ -128,6 +159,12 @@ const useStyles = makeStyles({
     form: {
         paddingLeft: "25px",
         paddingRight: "25px",
+        marginRight: "25px"
+    },
+
+    button: {
+        marginTop: '20px',
+        marginBottom: '20px'
     }
 
 });
