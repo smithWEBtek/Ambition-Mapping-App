@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Book from '../images/book.jpg';
+import EmojiPeopleRoundedIcon from '@material-ui/icons/EmojiPeopleRounded';
 
 
 export default function WelcomeCard(props) {
@@ -17,8 +18,9 @@ export default function WelcomeCard(props) {
 
             <Grid container spacing={4}>
                 <Grid item xs={6}>
+                    <EmojiPeopleRoundedIcon style={{ fontSize: 40 }} />
                     <Typography className={classes.title} color="textPrimary" gutterBottom>
-                        Welcome to the Ambition Mapping App to accompany "How to Get Ahead" by Zak Slayback
+                        Welcome to the Ambition Mapping App to accompany "How to Get Ahead" by Zak Slayback...
                         </Typography>
                     <Typography className={classes.body}>
                         This app assumes you’ve read chapter 1, “Focus,” of the book and is designed for you to follow along with the exercises included in that chapter.
@@ -60,10 +62,12 @@ const useStyles = makeStyles({
 
         paddingBottom: "25px",
         fontSize: 24,
+        textAlign: "left",
+        marginTop: "35px"
     },
 
     body: {
-        textAlign: "center",
+        textAlign: "left",
         fontSize: 18,
         color: "textSecondary",
         paddingBottom: "12px",
