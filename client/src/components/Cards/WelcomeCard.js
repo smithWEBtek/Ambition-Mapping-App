@@ -15,38 +15,29 @@ export default function WelcomeCard(props) {
         <Paper className={classes.root} variant="outlined">
 
 
-                <Grid container>
-                    <Grid item xs={6}>
-                        <Typography className={classes.title} color="textPrimary" gutterBottom>
-                            <p></p>Welcome to the <br></br> Ambition Mapping App<br></br> to accompany "How to Get Ahead" by Zak Slayback
+            <Grid container spacing={4}>
+                <Grid item xs={6}>
+                    <Typography className={classes.title} color="textPrimary" gutterBottom>
+                        Welcome to the Ambition Mapping App to accompany "How to Get Ahead" by Zak Slayback
                         </Typography>
-                        <Typography className={classes.body}>
-                            This workbook assumes you’ve read chapter 1, “Focus,” of the book and is designed for you to follow along with the exercises included in that chapter.
+                    <Typography className={classes.body}>
+                        This app assumes you’ve read chapter 1, “Focus,” of the book and is designed for you to follow along with the exercises included in that chapter.
                         </Typography>
-                        <Typography className={classes.body}>
-                            As such, this workbook does not include background or explanations of the exercises. You also do not need to use this workbook if you prefer just to do the exercises in the book on your own notebook or word processor.
+        
+                    <Typography className={classes.body}>
+                        If you have not yet read the book, you can pick up a copy here. These exercises make a lot more sense in the context of the book. I would not suggest doing them without that background.
                         </Typography>
-                        <Typography className={classes.body}>
-                            If you have not yet read the book, you can pick up a copy here. These exercises make a lot more sense in the context of the book. I would not suggest doing them without that background.
-                        </Typography>
-                        <Typography className={classes.body}>
-                            If you would like to use Ambition Mapping in your school,  organization, or corporation, please email me here.
-                        </Typography>
+                </Grid>
 
-                        <Typography className={classes.body}>
-                            If you enjoy sentence completion exercises, I recommend checking out Nathaniel Branden’s works. You can learn more about his works at NathanielBranden.com.
-                        </Typography>
-                    </Grid>
+                <Grid item xs={6} className={classes.body}>
 
-                    <Grid item xs={6} className={classes.body}>
-                        
-                            <img src ={Book} className={classes.responsiveImage}></img>
-                        
-                    </Grid>
-
+                    <img src={Book} className={classes.responsiveImage}></img>
 
                 </Grid>
-           
+
+
+            </Grid>
+
             {/* <CardActions>
                 <Button size="small">Learn More</Button>
             </CardActions> */}
@@ -60,8 +51,10 @@ const useStyles = makeStyles({
         display: "flex",
         flexGrow: 1,
         minWidth: 275,
-        paddingLeft: "10%",
-        paddingRight: "10%",
+        paddingLeft: "8%",
+        // paddingRight: "5%",
+        paddingTop: "5%",
+        paddingBottom: "5%"
     },
     title: {
 
@@ -71,7 +64,7 @@ const useStyles = makeStyles({
 
     body: {
         textAlign: "center",
-        fontSize: 14,
+        fontSize: 18,
         color: "textSecondary",
         paddingBottom: "12px",
     },
@@ -84,5 +77,7 @@ const useStyles = makeStyles({
         position: "relative",
         maxWidth: "100%",
         display: "block",
-      }
+    },
+
+    gridCol: {}
 });
