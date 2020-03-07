@@ -68,16 +68,14 @@ const Part1Card = () => {
                             </Typography>
                         </Grid>
 
-                        <Grid item xs={6}>
+                        <Grid item xs={12} className={classes.form} alignContent="center" justify="center">
                             
                                 <My12Form />
                             
 
                         </Grid>
 
-                        <Grid item xs={6}>
-
-                        </Grid>
+                    
                         <Grid item xs={12}>
                             <Button
                                 onClick={()=>handleContentChange('directions')}
@@ -126,6 +124,11 @@ const useStyles = makeStyles({
     pos: {
         marginBottom: 12,
     },
+
+    form: {
+        paddingLeft: "25px",
+        paddingRight: "25px",
+    }
 
 });
 

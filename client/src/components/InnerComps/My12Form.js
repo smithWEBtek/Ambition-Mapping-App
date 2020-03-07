@@ -53,9 +53,10 @@ class My12Form extends React.Component {
           style={{ margin: 8 }}
           margin="normal"
           fullWidth="true"
-          InputLabelProps={{
-            shrink: true,
-          }}
+          // InputLabelProps={{
+          //   shrink: true,
+          // }}
+          label="Testing"
           variant="outlined"
           // value = {this.state.answers[i]}
           onChange = {this.onChange}

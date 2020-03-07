@@ -17,6 +17,7 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '10%',
   },
   button: {
+    marginTop: "25px",
     marginRight: theme.spacing(1),
   },
   instructions: {
