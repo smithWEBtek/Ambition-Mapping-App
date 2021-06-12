@@ -45,7 +45,7 @@ const My12Form = (props) => {
           <TextField
             style={{ margin: 8 }}
             margin="dense"
-            fullWidth="true"
+            fullWidth
             width="75%"
             name={index}
             label={props.currentQuestion}

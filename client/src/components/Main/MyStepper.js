@@ -87,9 +87,9 @@ export default function MyStepper() {
           </div>
         ) : (
             <div>
+              {getStepContent(activeStep)}
               <Typography 
               className={classes.instructions}>
-              {getStepContent(activeStep)}
               </Typography>
               <div>
                 <Button 
